@@ -2,7 +2,7 @@
 import React,{useState} from 'react';
 import { store } from './Redux/store';
 import {handleIncrement,handleDecrement} from './Redux/action';
-
+import "./App.css"
 function App() {
   const {dispatch}=store;
   const {counter}=store.getState();
@@ -13,7 +13,8 @@ function App() {
   });
 
   return (
-    <div>
+    
+    <div className="App">
       <h1>Counter : {counter}</h1>
       <button onClick={()=>dispatch(handleIncrement())}>INCREMENT</button>
       <button onClick={()=>dispatch(handleDecrement())}>DECREMENT</button>
